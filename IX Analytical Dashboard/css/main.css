@@ -170,13 +170,15 @@ body {
              }
     
 ul.header li {
+    background: 
     display: block;
     list-style-type: none;
 }
 .pull-right { 
     float: right;
-    padding: 0
+    margin-right: 10px;
 }
 .pull-left { 
-    float:left 
+    float:left;
+    margin-left: -40px;
 }
