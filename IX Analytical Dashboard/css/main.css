@@ -1,4 +1,5 @@
-     body {
+
+body {
                font-weight: 300;
                background-color: #f7f7f7 !important;
                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif, Arial, Verdana !important;
@@ -202,4 +203,23 @@
                .form-inline .input-group {
                  width: 100%;
                }
+<<<<<<< HEAD
              }
+=======
+                 
+             }
+    
+ul.header li {
+    background: 
+    display: block;
+    list-style-type: none;
+}
+.pull-right { 
+    float: right;
+    margin-right: 10px;
+}
+.pull-left { 
+    float:left;
+    margin-left: -40px;
+}
+>>>>>>> 2a607f6e03b86984841b7125e64f48ad4c8bb3d9
