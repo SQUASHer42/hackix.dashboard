@@ -7,6 +7,8 @@
 <script type="text/javascript" src="./fusioncharts/fusioncharts.js"></script>
 <script type="text/javascript" src="./fusioncharts/themes/fusioncharts.theme.zune.js?cacheBust=56"></script>
 <script type="text/javascript" src="./fusioncharts/fusioncharts.jqueryplugin.js"></script>
+<script type="text/javascript" src="./js/main.js"> </script>
+    
 
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
@@ -27,6 +29,7 @@
             </center>
         </div>
 
+<!--
         <nav class="navbar navbar-default visible-xs">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -42,7 +45,7 @@
              <div class="collapse navbar-collapse" id="useInfo">
               <ul class="nav navbar-nav">
                 <li class="text-center">
-                <h2 class="small text-uppercase">Welcome</h2>
+                <h2 class="small text-uppercase">Welcome,</h2>
                 <img src="imgs/x.jpeg" alt="" width="70" height="70" style="border-radius:50px">
                 <div class="text-uppercase">Advertiser X</div>
                 </li>
@@ -50,21 +53,21 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                  <li > <a href="#dashboard">Dashboard</a> </li>
-                  <li class="active"> <a href="#Audience Overview">Audience Overview</a> </li>
-                  <li> <a href="Acquisition.html">Acquisition</a> </li>
-                  <li> <a href="Behavior.html">Behavior</a> </li>
-                  <li> <a href="Conversions.html">Conversions</a> </li>
+                  <li class="active"> <a href="#dashboard">Dashboard</a> </li>
+                  <li> <a href="Profile.html">Profile</a> </li>
+                  <li> <a href="Settings.html">Settings</a> </li>
               </ul>
             </div>
           </div>
         </nav>
+-->
 
         <div class="container-fluid">
           <div class="row content">
             <div class="col-sm-3 col-md-3 col-lg-2  sidenav hidden-xs clearfix" id="nav">
 
               <div data-spy="affix" data-offset-top="0" class="sidenav-container">
+                  
                 <div class="row">
                   <div class="col-sm-12">
                     <p></p>
@@ -80,25 +83,51 @@
                       <div class="text-uppercase">Advertiser X</div>
                     </div>
                 </div>
+                  
                 <div class="row">
                   <div class="col-sm-12">
                     <ul class="nav nav-pills nav-stacked">
-                      <li > <a href="#dashboard">Dashboard</a> </li>
-                      <li class="active"> <a href="#Audience Overview">Audience Overview</a> </li>
-                      <li> <a href="Acquisition.html">Acquisition</a> </li>
-                      <li> <a href="Behavior.html">Behavior</a> </li>
-                      <li> <a href="Conversions.html">Conversions</a> </li>
+                      <li class="active"> <a href="#dashboard">Dashboard</a> </li>
+                      <li> <a href="Profile.html">Profile</a> </li>
+                      <li> <a href="Settings.html">Settings</a> </li>
                     </ul>
                   </div>
                 </div>
+                  
               </div>
 
               <br>
 
             </div>
-            <br>
+<!--            <br>-->
 
             <div class="col-sm-9 col-md-9 col-lg-10" id="contemt-main">
+                
+
+                <div class="row">
+                    
+                    <ul>
+                        <li>
+                            <button id="columnToggler" type="button" onclick="toggleColumn()">
+                            <img src="imgs/columnToggler.png" border="0">
+                            </button>
+                        </li>
+                        
+                        <li>
+                            <a href="Profile.html"> Profile </a> 
+                            <button id="columnToggler" type="button" onclick="toggleColumn()">
+                                <img src="imgs/columnToggler.png" border="0">
+                            </button>
+                        </li>
+                        
+                       <li> 
+                            Item 3
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                    
 
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" id="dashboard">

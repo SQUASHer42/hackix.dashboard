@@ -48,6 +48,7 @@
 
               #nav{
                 max-height: 2200px;
+                display: block;
               }         
              .nav-stacked {
                margin-top: 35px;

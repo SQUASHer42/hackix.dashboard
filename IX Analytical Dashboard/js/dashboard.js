@@ -368,7 +368,7 @@ $(document).ready(function() {
       format:'DD/MM/YYYY',
       maxDate : maxDate
     });
-    //Setting the defailt date 
+    //Setting the default date 
     $('#datetimepicker6').data("DateTimePicker").date(new Date('1 July 2016'));  
     
     $('#datetimepicker7').datetimepicker({
