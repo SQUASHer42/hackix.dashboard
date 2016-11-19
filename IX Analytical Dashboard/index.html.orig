@@ -107,10 +107,24 @@
 
 
                 <div class="row">
+<<<<<<< HEAD
 
                     <ul>
-
+=======
+                    
                     <ul class="header">
+>>>>>>> 2a607f6e03b86984841b7125e64f48ad4c8bb3d9
+                        <li>
+                            <div class="pull-left">
+                                
+                                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                                    <img src="imgs/columnToggler.png" height="15" border="0">
+                                </button>
+                            </div>
+                        </li>
+
+                        <li>
+<<<<<<< HEAD
                             <a href="Profile.html"> Profile </a>
                             <button id="columnToggler" type="button" onclick="toggleColumn()">
                                 <img src="imgs/columnToggler.png" border="0">
@@ -118,16 +132,19 @@
                         </li>
 
                        <li>
+                            Item 3
+=======
                             <div class="pull-right">
-
+                                
                                 <button id="columnToggler" type="button1" onclick="toggleColumn()">
                                     <img src="imgs/x.jpeg" height="15" style="border-radius:50px">
                                 </button>
-
+                                
                                 <button id="columnToggler" type="button1" onclick="toggleColumn()">
                                     <img src="imgs/settings.png" height="15" border="0">
                                 </button>
                             </div>
+>>>>>>> 2a607f6e03b86984841b7125e64f48ad4c8bb3d9
                         </li>
 
                     </ul>
