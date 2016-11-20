@@ -11,7 +11,7 @@
 
 $(document).ready(function() {
   var servers;
-  $.getJSON("http://localhost:8000/servers",function(data){
+  $.getJSON("./data/data.json",function(data){
     servers = JSON.parse(data);
     console.log(servers);
     $(document.body).append(data);
