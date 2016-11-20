@@ -9,6 +9,10 @@ body {
              /* top: 125px !important;*/
              }
 
+             .footer {
+               background-position: bottom;
+             }
+
              .dropbtn {
                background-color: #4CAF50;
                color: white;

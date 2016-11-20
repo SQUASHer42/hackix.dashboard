@@ -6,6 +6,25 @@
 /*
 This file is used to load the data / comments of charts in the dashboard
 */
+var serverData = [];
+$(document).ready(function(){
+	$.getJSON( "data/data.json", function( data ) {
+		var tmpItems = [];
+    $.each(data, function( key, val ) {
+      if(key === "servers"){
+
+        for(var i=0; i <val[0].servers.length; i++){
+          tmpItems.push({label: val[0].servers[i].dc, value: val[0].servers[i].online});
+
+        }
+      }
+
+    });
+		serverData = tmpItems;
+		console.log(serverData);
+  });
+});
+
 var user_chart_data = [{
 						      "label": "July 1",
 						      "value": "5470"
@@ -100,7 +119,8 @@ var user_chart_data = [{
 						      "label": "31",
 						      "value": "2676"
 						    }];
-    var page_views_chart_data =  [{
+
+var page_views_chart_data =  [{
 						      "label": "July 1",
 						      "value": "16447"
 						    }, {

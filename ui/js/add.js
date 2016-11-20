@@ -9,6 +9,15 @@ $(document).ready(function(){
     var text = $(this).text();
     $("#x-axis").text(text);
   });
+
+  $(".ybtn").on("click", function(){
+    var text = $(this).text();
+    $("#y-axis").text(text);
+  });
+
+  $(".submit").on("click", function(){
+    //Not implemented
+  });
 });
 
 function myFunction(id) {

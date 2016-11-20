@@ -8,37 +8,8 @@
     The given below code will render all the charts that you see when the file is loaded
  */
 //Creating the users chart for the no. of user that visited in that month
+
 $(document).ready(function() {
-  var servers;
-  /*$.getJSON("./data/data.json",function(data){
-    servers = JSON.parse(data);
-    console.log(servers);
-    $(document.body).append(data);
-  });*/
-
-  $.getJSON( "data/data.json", function( data ) {
-    var items = [];
-    $.each(data, function( key, val ) {
-      if(key === "servers"){
-        for(var i=0; i <val[0].servers.length; i++){
-          items.push( "<li id='timestamp'>" + val[0].servers[i].dc + "</li>" );
-        }
-
-      }
-
-    });
-
-    //console.log(items[0]);
-    items.forEach(function(item){
-      $(document.body).prepend(item);
-      console.log(item);
-    });
-
-    /*$( "<ul/>", {
-      "class": "list",
-      html: items.join( "" )
-    }).appendTo( "body" );*/
-  });
 
   $("#user-chart-container").insertFusionCharts({
     type: 'column2d',
@@ -62,7 +33,7 @@ $(document).ready(function() {
         "plotToolText": "<div><b>$label, <br/>Users: $datavalue</b></div>",
         "theme": "zune"
       },
-      "data":  0//from data.js
+      "data": user_chart_data //from data.js
     }
   });
   //Creating Page Views Chart for that month
@@ -392,6 +363,11 @@ $(document).ready(function() {
     //Maximum  date for which the analytic could be done
     var max_pickup_Date = new Date();
     var maxDate = new Date(new Date(max_pickup_Date).setMonth(max_pickup_Date.getMonth()-1));
+
+    $('#refresh').on("click", function(){
+      update_chart(chart1, 5, serverData);
+      console.log("updated");
+    });
 
     $('#datetimepicker6').datetimepicker({
       format:'DD/MM/YYYY',
