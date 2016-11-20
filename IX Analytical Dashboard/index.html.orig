@@ -8,7 +8,7 @@
 <script type="text/javascript" src="./fusioncharts/themes/fusioncharts.theme.zune.js?cacheBust=56"></script>
 <script type="text/javascript" src="./fusioncharts/fusioncharts.jqueryplugin.js"></script>
 <script type="text/javascript" src="./js/main.js"> </script>
-
+    
 
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
@@ -20,8 +20,6 @@
 <script type="text/javascript" src="./js/moment-with-locales.js"></script>
 
 <script type="text/javascript" src="./js/bootstrap-datetimepicker.js"></script>
-
-
 
 </head>
 <body>
@@ -105,15 +103,9 @@
 
             <div class="col-sm-9 col-md-9 col-lg-10" id="contemt-main">
 
-
                 <div class="row">
-<<<<<<< HEAD
 
-                    <ul>
-=======
-                    
                     <ul class="header">
->>>>>>> 2a607f6e03b86984841b7125e64f48ad4c8bb3d9
                         <li>
                             <div class="pull-left">
                                 
@@ -122,34 +114,22 @@
                                 </button>
                             </div>
                         </li>
-
+                        
                         <li>
-<<<<<<< HEAD
-                            <a href="Profile.html"> Profile </a>
-                            <button id="columnToggler" type="button" onclick="toggleColumn()">
-                                <img src="imgs/columnToggler.png" border="0">
-                            </button>
-                        </li>
-
-                       <li>
-                            Item 3
-=======
                             <div class="pull-right">
                                 
                                 <button id="columnToggler" type="button1" onclick="toggleColumn()">
                                     <img src="imgs/x.jpeg" height="15" style="border-radius:50px">
                                 </button>
-                                
+
                                 <button id="columnToggler" type="button1" onclick="toggleColumn()">
                                     <img src="imgs/settings.png" height="15" border="0">
                                 </button>
                             </div>
->>>>>>> 2a607f6e03b86984841b7125e64f48ad4c8bb3d9
                         </li>
 
                     </ul>
                 </div>
-
 
 
               <div class="row">
@@ -193,8 +173,8 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="row" >
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable='true' ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="drag(event)" id="1" >
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -210,7 +190,7 @@
                   </div>
 
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="drag(event)" id="2">
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -226,7 +206,8 @@
 
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                  
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable="true">
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -241,9 +222,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-
-
+                  
+                  
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable="true">
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -261,8 +242,9 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-12">
-                  <div class="well"  id="sessions">
+                  
+                <div class="col-sm-12" draggable="true">
+                  <div class="well"  id="sessions" draggable="true">
                     <h4>Sessions</h4>
                     <p><span id="session-chart-container">FusionCharts will render here</span></p>
                   </div>
@@ -270,13 +252,13 @@
               </div>
 
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4 >Visitors' Type</h4>
                     <p><span id="visitor-chart-container">FusionCharts will render here</span></p>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4>Gender</h4>
                     <p><span id="gender-chart-container">FusionCharts will render here</span></p>
@@ -284,13 +266,13 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4 >Traffic Sources</h4>
                     <p><span id="traffic-chart-container">FusionCharts will render here</span></p>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4>Age Group</h4>
                     <p><span id="age-chart-container">FusionCharts will render here</span></p>
@@ -299,14 +281,13 @@
               </div>
 
               <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12" draggable="true">
                   <div class="well">
                     <h4>Location</h4>
                     <p><span id="location-chart-container">FusionCharts will render here</span></p>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
