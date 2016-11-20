@@ -4,15 +4,11 @@
 <title>Index Exchange Advertising Analytical Dashboard</title>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="./fusioncharts/fusioncharts.js"></script>
-<script type="text/javascript" src="./fusioncharts/themes/fusioncharts.theme.zune.js?cacheBust=56"></script>
-<script type="text/javascript" src="./fusioncharts/fusioncharts.jqueryplugin.js"></script>
 <script type="text/javascript" src="./js/main.js"> </script>
 
 
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
-<link rel="stylesheet" type="text/css" href="./css/bootstrap-datetimepicker.css">
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 
 
@@ -20,175 +16,130 @@
 <script type="text/javascript" src="./js/moment-with-locales.js"></script>
 
 <script type="text/javascript" src="./js/bootstrap-datetimepicker.js"></script>
-
+<script type = "text/javascript" src="./js/add.js"></script>
 
 
 </head>
 <body>
-        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 hidden" id="loader">
-           <center>
-              <img src="./imgs/ajax-loader.gif">
-            </center>
-        </div>
+  <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 hidden" id="loader">
+     <center>
+        <img src="./imgs/ajax-loader.gif">
+      </center>
+  </div>
 
-<!--
-        <nav class="navbar navbar-default visible-xs">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-               <button type="button" class="navbar-toggle user-info" data-toggle="collapse" data-target="#useInfo">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-              </button>
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-3 col-md-3 col-lg-2  sidenav hidden-xs clearfix" id="nav">
+
+        <div data-spy="affix" data-offset-top="0" class="sidenav-container">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <p></p>
             </div>
-             <div class="collapse navbar-collapse" id="useInfo">
-              <ul class="nav navbar-nav">
-                <li class="text-center">
-                <h2 class="small text-uppercase">Welcome,</h2>
+          </div>
+
+          <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-5">
                 <img src="imgs/x.jpeg" alt="" width="70" height="70" style="border-radius:50px">
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-7" style="margin-top:20px">
+                <div class="small">Welcome,</div>
                 <div class="text-uppercase">Advertiser X</div>
-                </li>
-              </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                  <li class="active"> <a href="#dashboard">Dashboard</a> </li>
-                  <li> <a href="Profile.html">Profile</a> </li>
-                  <li> <a href="Settings.html">Settings</a> </li>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="nav nav-pills nav-stacked">
+                <li> <a href="index.html">Dashboard</a> </li>
+                <li> <a href="Profile.html">Profile</a> </li>
+                <li> <a href="Settings.html">Settings</a> </li>
+                <li class="active"> <a href="Add.html">Add Chart</a> </li>
               </ul>
             </div>
           </div>
-        </nav>
--->
 
-        <div class="container-fluid">
-          <div class="row content">
-            <div class="col-sm-3 col-md-3 col-lg-2  sidenav hidden-xs clearfix" id="nav">
+        </div>
 
-              <div data-spy="affix" data-offset-top="0" class="sidenav-container">
+        <br>
 
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p></p>
-                  </div>
-                </div>
+      </div>
 
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-5">
-                      <img src="imgs/x.jpeg" alt="" width="70" height="70" style="border-radius:50px">
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-7" style="margin-top:20px">
-                      <div class="small">Welcome,</div>
-                      <div class="text-uppercase">Advertiser X</div>
-                    </div>
-                </div>
+      <div class="col-sm-9 col-md-9 col-lg-10" id="contemt-main">
 
-                <div class="row">
-                  <div class="col-sm-12">
-                    <ul class="nav nav-pills nav-stacked">
-                      <li> <a href="#dashboard">Dashboard</a> </li>
-                      <li> <a href="Profile.html">Profile</a> </li>
-                      <li> <a href="Settings.html">Settings</a> </li>
-                      <li class="active"> <a href="Add.html">Add Chart</a> </li>
-                    </ul>
-                  </div>
-                </div>
 
+        <div class="row">
+          <ul class="header">
+            <li>
+              <a href="Profile.html"> Profile </a>
+              <button id="columnToggler" type="button" onclick="toggleColumn()">
+                <img src="imgs/columnToggler.png" border="0">
+              </button>
+            </li>
+            <li>
+              <div class="pull-right">
+
+                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                    <img src="imgs/x.jpeg" height="15" style="border-radius:50px">
+                </button>
+
+                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                    <img src="imgs/settings.png" height="15" border="0">
+                </button>
               </div>
+            </li>
 
-              <br>
-
-            </div>
-<!--            <br>-->
-
-            <div class="col-sm-9 col-md-9 col-lg-10" id="contemt-main">
-
-
-                <div class="row">
-
-                    <ul>
-                        <li>
-                            <button id="columnToggler" type="button" onclick="toggleColumn()">
-                            <img src="imgs/columnToggler.png" border="0">
-                            </button>
-                        </li>
-
-                        <li>
-                            <a href="Profile.html"> Profile </a>
-                            <button id="columnToggler" type="button" onclick="toggleColumn()">
-                                <img src="imgs/columnToggler.png" border="0">
-                            </button>
-                        </li>
-
-                       <li>
-                            Item 3
-                        </li>
-
-                    </ul>
-                </div>
+          </ul>
+        </div>
 
 
 
-              <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" id="dashboard">
-                  <span class="small text-uppercase text-muted">Dashboards</span>
-                  <h1>Add Chart</h1>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" id="dashboard">
+            <span class="small text-uppercase text-muted">Dashboards</span>
+            <h1>Add Chart</h1>
 
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                  <div class="row">
-                    <div class='col-sm-12 form-inline datetimepickerwrapper'>
-                      <div class="form-group">
-                        <label>From</label>
-                        <div class='input-group date' id='datetimepicker6'>
+          </div>
 
-                          <input type='text' class="form-control" value="01/07/2016" data-provide="datepicker"  />
-                          <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                          </span>
-                        </div>
-                      </div>
 
-                      <div class="form-group">
-                        <label>To</label>
-                        <div class='input-group date' id='datetimepicker7'>
 
-                          <input type='text' class="form-control" value="1/08/2016" disabled="true" />
-                          <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-12">
-                  <hr>
-                </div>
-              </div>
-
-              <div class="dropdown">
-                <div class="dropbtn">Words</button>
-                  <div id="myDropdown" class="dropdown_content">
-                    <div>Pie Chart</div>
-                    <div>Bar Graph</div>
-                    <div>Line Graph</div>
-                  </div>
-                </div>
-                <script type = "text/javascript" src="./js/add.js"></script>
-              </div>
-
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <hr>
           </div>
         </div>
-</body>
 
-<script type="text/javascript" src="./js/data.js"></script>
-<script type="text/javascript" src="./js/dashboard.js"></script>
+
+        <div class="row">
+          <div class="dropdown">
+            <button id="charts" class="dropbtn" onclick="myFunction('myDropdown')"><b>Chart Type</b></button>
+              <div id="myDropdown" class="dropdown-content">
+                <div class="choicebtn">Pie Chart</div>
+                <div class="choicebtn">Line Graph</div>
+                <div class="choicebtn">Bar Graph</div>
+              </div>
+          </div>
+
+          <div class="dropdown">
+            <button id="x-axis" class="dropbtn" onclick="myFunction('xDrop')"><b>Variable</b></button>
+              <div id="xDrop" class="dropdown-content">
+                <div class="xbtn">Time</div>
+                <div class="xbtn">Money</div>
+                <div class="xbtn">Food</div>
+              </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</body>
 </html>
