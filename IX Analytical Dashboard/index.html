@@ -136,7 +136,7 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" id="dashboard">
                   <span class="small text-uppercase text-muted">Dashboards</span>
-                  <h1>Audience Overview</h1>
+                  <h1>Adspace Overview</h1>
 
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
@@ -168,14 +168,15 @@
 
                 </div>
               </div>
+                
               <div class="row">
                 <div class="col-sm-12">
                   <hr>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="row" >
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable='true' ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="drag(event)" id="1" >
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -191,7 +192,7 @@
                   </div>
 
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="drag(event)" id="2">
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -207,7 +208,8 @@
 
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                  
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable="true">
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -222,9 +224,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-
-
+                  
+                  
+                <div class="col-sm-6 col-md-6 col-lg-3" draggable="true">
                   <div class="well">
                     <div class="row">
                       <div class="col-md-12 col-lg-6">
@@ -241,9 +243,11 @@
                   </div>
                 </div>
               </div>
+                
               <div class="row">
-                <div class="col-sm-12">
-                  <div class="well"  id="sessions">
+                  
+                <div class="col-sm-12" draggable="true">
+                  <div class="well"  id="sessions" draggable="true">
                     <h4>Sessions</h4>
                     <p><span id="session-chart-container">FusionCharts will render here</span></p>
                   </div>
@@ -251,13 +255,13 @@
               </div>
 
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4 >Visitors' Type</h4>
                     <p><span id="visitor-chart-container">FusionCharts will render here</span></p>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4>Gender</h4>
                     <p><span id="gender-chart-container">FusionCharts will render here</span></p>
@@ -265,13 +269,13 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4 >Traffic Sources</h4>
                     <p><span id="traffic-chart-container">FusionCharts will render here</span></p>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" draggable="true">
                   <div class="well">
                     <h4>Age Group</h4>
                     <p><span id="age-chart-container">FusionCharts will render here</span></p>
@@ -280,7 +284,7 @@
               </div>
 
               <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12" draggable="true">
                   <div class="well">
                     <h4>Location</h4>
                     <p><span id="location-chart-container">FusionCharts will render here</span></p>
