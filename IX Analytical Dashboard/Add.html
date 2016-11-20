@@ -27,71 +27,74 @@
       </center>
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid" style="height:'100%'">
     <div class="row content">
-      <div class="col-sm-3 col-md-3 col-lg-2  sidenav hidden-xs clearfix" id="nav">
+                 <div class="col-sm-3 col-md-3 col-lg-2  sidenav hidden-xs clearfix" id="nav">
 
-        <div data-spy="affix" data-offset-top="0" class="sidenav-container">
+              <div data-spy="affix" data-offset-top="0" class="sidenav-container">
 
-          <div class="row">
-            <div class="col-sm-12">
-              <p></p>
-            </div>
-          </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p></p>
+                  </div>
+                </div>
 
-          <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-5">
-                <img src="imgs/x.jpeg" alt="" width="70" height="70" style="border-radius:50px">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-5">
+                      <img src="imgs/x.jpeg" alt="" width="70" height="70" style="border-radius:50px">
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-7" style="margin-top:20px">
+                      <div class="small">Welcome,</div>
+                      <div class="text-uppercase">Advertiser X</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li> <a href="index.html">Dashboard</a> </li>
+                      <li> <a href="Profile.html">Profile</a> </li>
+                      <li> <a href="Settings.html">Settings</a> </li>
+                      <li class="active"> <a href="#">Add Chart</a> </li>
+                    </ul>
+                  </div>
+                </div>
+
               </div>
-              <div class="col-sm-12 col-md-12 col-lg-7" style="margin-top:20px">
-                <div class="small">Welcome,</div>
-                <div class="text-uppercase">Advertiser X</div>
-              </div>
-          </div>
 
-          <div class="row">
-            <div class="col-sm-12">
-              <ul class="nav nav-pills nav-stacked">
-                <li> <a href="index.html">Dashboard</a> </li>
-                <li> <a href="Profile.html">Profile</a> </li>
-                <li> <a href="Settings.html">Settings</a> </li>
-                <li class="active"> <a href="Add.html">Add Chart</a> </li>
-              </ul>
+              <br>
+
             </div>
-          </div>
-
-        </div>
-
-        <br>
-
-      </div>
 
       <div class="col-sm-9 col-md-9 col-lg-10" id="contemt-main">
+          
+            <div class="row">
 
+                    <ul class="header">
+                        <li>
+                            <div class="pull-left">
+                                
+                                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                                    <img src="imgs/columnToggler.png" height="15" border="0">
+                                </button>
+                            </div>
+                        </li>
 
-        <div class="row">
-          <ul class="header">
-            <li>
-              <a href="Profile.html"> Profile </a>
-              <button id="columnToggler" type="button" onclick="toggleColumn()">
-                <img src="imgs/columnToggler.png" border="0">
-              </button>
-            </li>
-            <li>
-              <div class="pull-right">
+                       <li>
+                            <div class="pull-right">
 
-                <button id="columnToggler" type="button1" onclick="toggleColumn()">
-                    <img src="imgs/x.jpeg" height="15" style="border-radius:50px">
-                </button>
+                                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                                    <img src="imgs/x.jpeg" height="15" style="border-radius:50px">
+                                </button>
 
-                <button id="columnToggler" type="button1" onclick="toggleColumn()">
-                    <img src="imgs/settings.png" height="15" border="0">
-                </button>
-              </div>
-            </li>
+                                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                                    <img src="imgs/settings.png" height="15" border="0">
+                                </button>
+                            </div>
+                        </li>
 
-          </ul>
-        </div>
+                    </ul>
+            </div>
 
 
 
