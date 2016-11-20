@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Index Exchange Advertising Analytical Dashboard</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="./js/main.js"> </script>
+
+
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/moment-with-locales.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap-datetimepicker.js"></script>
+<script type = "text/javascript" src="./js/add.js"></script>
+
+
+</head>
+<body>
+  <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 hidden" id="loader">
+     <center>
+        <img src="./imgs/ajax-loader.gif">
+      </center>
+  </div>
+
+  <div class="container-fluid" style="height:'100%'">
+    <div class="row content">
+                 <div class="col-sm-3 col-md-3 col-lg-2  sidenav hidden-xs clearfix" id="nav">
+
+              <div data-spy="affix" data-offset-top="0" class="sidenav-container">
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p></p>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-5">
+                      <img src="imgs/x.jpeg" alt="" width="70" height="70" style="border-radius:50px">
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-7" style="margin-top:20px">
+                      <div class="small">Welcome,</div>
+                      <div class="text-uppercase">Advertiser X</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li> <a href="index.html">Dashboard</a> </li>
+                      <li> <a href="Profile.html">Profile</a> </li>
+                      <li> <a href="Settings.html">Settings</a> </li>
+                      <li class="active"> <a href="#">Add Chart</a> </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <br>
+
+            </div>
+
+      <div class="col-sm-9 col-md-9 col-lg-10" id="contemt-main">
+          
+            <div class="row">
+
+                    <ul class="header">
+                        <li>
+                            <div class="pull-left">
+                                
+                                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                                    <img src="imgs/columnToggler.png" height="15" border="0">
+                                </button>
+                            </div>
+                        </li>
+
+                       <li>
+                            <div class="pull-right">
+
+                                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                                    <img src="imgs/x.jpeg" height="15" style="border-radius:50px">
+                                </button>
+
+                                <button id="columnToggler" type="button1" onclick="toggleColumn()">
+                                    <img src="imgs/settings.png" height="15" border="0">
+                                </button>
+                            </div>
+                        </li>
+
+                    </ul>
+            </div>
+
+
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" id="dashboard">
+            <span class="small text-uppercase text-muted">Dashboards</span>
+            <h1>Add Chart</h1>
+
+          </div>
+
+
+
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <hr>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="dropdown">
+            <button id="charts" class="dropbtn" onclick="myFunction('myDropdown')"><b>Chart Type</b></button>
+              <div id="myDropdown" class="dropdown-content">
+                <div class="choicebtn">Pie Chart</div>
+                <div class="choicebtn">Line Graph</div>
+                <div class="choicebtn">Bar Graph</div>
+              </div>
+          </div>
+
+          <div class="dropdown">
+            <button id="x-axis" class="dropbtn" onclick="myFunction('xDrop')"><b>Variable</b></button>
+              <div id="xDrop" class="dropdown-content">
+                <div class="xbtn">Time</div>
+                <div class="xbtn">Money</div>
+                <div class="xbtn">Food</div>
+              </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
