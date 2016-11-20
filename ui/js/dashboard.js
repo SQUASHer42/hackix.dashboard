@@ -8,13 +8,36 @@
     The given below code will render all the charts that you see when the file is loaded
  */
 //Creating the users chart for the no. of user that visited in that month
-
 $(document).ready(function() {
   var servers;
-  $.getJSON("./data/data.json",function(data){
+  /*$.getJSON("./data/data.json",function(data){
     servers = JSON.parse(data);
     console.log(servers);
     $(document.body).append(data);
+  });*/
+
+  $.getJSON( "data/data.json", function( data ) {
+    var items = [];
+    $.each(data, function( key, val ) {
+      if(key === "servers"){
+        for(var i=0; i <val[0].servers.length; i++){
+          items.push( "<li id='timestamp'>" + val[0].servers[i].dc + "</li>" );
+        }
+
+      }
+
+    });
+
+    //console.log(items[0]);
+    items.forEach(function(item){
+      $(document.body).prepend(item);
+      console.log(item);
+    });
+
+    /*$( "<ul/>", {
+      "class": "list",
+      html: items.join( "" )
+    }).appendTo( "body" );*/
   });
 
   $("#user-chart-container").insertFusionCharts({
